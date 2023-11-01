@@ -6,8 +6,9 @@ Ideana on helpottaa automaatiota, skaalautavuutta sekä ongelmatilanteiden nopea
 
 ## a)  
 Aloitin Vagrantin asennuksen ja asensin sen.
-
+    
 ![image](https://github.com/Ferresette/Palvelinten_hallinta/assets/148973799/c931afab-f3a2-45dd-b7d1-030018bdb0a0)
+
 
 ## b)
 Asensin cmd vagrantin ja yhdistin sen toiseen koneeseen ssh avulla. Sekä kokeilin, että netti toimii.
@@ -16,7 +17,9 @@ Asensin cmd vagrantin ja yhdistin sen toiseen koneeseen ssh avulla. Sekä kokeil
 
 
 ## c)
-Tein kolme eri konetta ja myös salt herran sekä orjan käyttämällä teron koodia. Syötin koodin valmiina olevaan Vagrantfileen notepadissa ja tallensin sen users\kakko\vagrant\debian tiedostoon. Minkä jälkeen siirryin samaan tiedostoon komentorivissä ja syötin koodin vagrant up.
+Tein kolme eri konetta ja myös salt herran sekä orjan käyttämällä teron koodia. Syötin koodin valmiina olevaan Vagrantfileen notepadissa ja tallensin sen users\kakko\vagrant\debian tiedostoon. Minkä jälkeen siirryin samaan tiedostoon komentorivissä ja syötin koodin. 
+
+    >vagrant up
     
 ## ![image](https://github.com/Ferresette/Palvelinten_hallinta/assets/148973799/6b1a82b2-2a7c-4451-86a4-1435fca55cc0)
 
@@ -37,6 +40,7 @@ Lähdin hyväksymään avaimet
 ![image](https://github.com/Ferresette/Palvelinten_hallinta/assets/148973799/51847d00-d279-4e33-8885-5dcf12cb5630)
 
 Sekä testasin vielä yhteyden
+
     $sudo salt '*' test.ping
 
 ![image](https://github.com/Ferresette/Palvelinten_hallinta/assets/148973799/ee4e9cfc-b772-4ac0-a1fa-db5adc973bbc)
