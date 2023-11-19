@@ -48,15 +48,52 @@ Ajoin sen jälkeen komennolla sudo salt '*' state.apply onnistuneesti.
 
 ## c) Apache. Asenna Apache, korvaa sen testisivu ja varmista, että demoni käynnistyy.
 
+Aloitin asentamalla Apache2 Webbipalvelimen. Sen jälkeen tein kansion /srv/salt/apache2/ minkä jälkeen loin init.sls tiedoston. Asennukset onnistuivat ja tiedostoja muutettiin onnistuneesti.
+
+Curlasin t001 ip osoitteen ja tässä näkyvät sivustolle tehdyt muutokset.
+
+![image](https://github.com/Ferresette/Palvelinten_hallinta/assets/148973799/1dca5f0e-c76f-4b03-a57e-5c7f355ab0a5)
+
+Alempana näkyy orjien tilat, mitkä tuli komennolla sudo salt '*' state.apply apache2
 
 
+![image](https://github.com/Ferresette/Palvelinten_hallinta/assets/148973799/1e8367ba-68c6-40c9-a97a-0a3763206e28)
 
 
-Ensin käsin, vasta sitten automaattisesti.
-Kirjoita tila sls-tiedostoon.
-pkg-file-service
-Tässä ei tarvita service:ssä watch, koska index.html ei ole asetustiedosto
+![image](https://github.com/Ferresette/Palvelinten_hallinta/assets/148973799/4d63f3f0-01ce-45a7-8ffa-bc513c3fa19a)
+
+Viimeisenä vielä kuva sls tiedostosta. 
+
+![image](https://github.com/Ferresette/Palvelinten_hallinta/assets/148973799/504b2f38-f4f9-4bfa-ae81-e35fce5dbe0c)
+
+
 ## d) SSHouto. Lisää uusi portti, jossa SSHd kuuntelee.
-Tämä tehtävä on helpointa tehdä tavallisella virtuaalikoneella, jota Vagrant ei ohjaa.
-Löydät oikean asetuksen katsomalla SSH:n asetustiedostoa
-Nyt tarvitaan service-watch, jotta demoni käynnistetään uudelleen, jos asetustiedosto muuttuu masterilla
+
+Löysin Teron ohjeistuksen SSH tekemiseen. Lähdin muokkaamaan srv/salt/sshd.sls tiedostoa ja lisäsin sinne kyseisen koodin.
+
+![image](https://github.com/Ferresette/Palvelinten_hallinta/assets/148973799/6226a971-dd35-47c8-bd47-1c6143b98859)
+
+Tämän jälkeen lähdin muokkaamaan srv/salt/sshd_config tiedostoa.
+
+![image](https://github.com/Ferresette/Palvelinten_hallinta/assets/148973799/0e2b2493-c820-4346-bea1-b6d427ea5752)
+
+Ajoin vielä komennon sudo salt '*' state.apply sshd mikä antoi onnistuneet tilat.
+
+Asensin Netcatin, jotta voisin saada loput tiedot.
+
+![image](https://github.com/Ferresette/Palvelinten_hallinta/assets/148973799/f734bb15-e6e7-4352-af21-d02698eeb213)
+
+Onnistunut.
+
+## References 
+
+https://terokarvinen.com/2023/configuration-management-2023-autumn/
+
+https://terokarvinen.com/2018/04/03/pkg-file-service-control-daemons-with-salt-change-ssh-server-port/?fromSearch=karvinen%20salt%20ssh
+
+https://terokarvinen.com/2018/apache-user-homepages-automatically-salt-package-file-service-example/?fromSearch=salt%20file
+
+
+
+
+
