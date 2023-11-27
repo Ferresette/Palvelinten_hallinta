@@ -64,6 +64,39 @@ Siirryin kansioon srv/salt/apache2 ja lisäsin tekstieditoriin seuraavan tekstin
 
 ![image](https://github.com/Ferresette/Palvelinten_hallinta/assets/148973799/a8cfa398-9278-4e65-a34b-9589ee7b4764)
 
+Muuten toimi, mutta yksi kohta näytti punaista, tämä viittasi jollain tapaa file.managed funktion epäonnistumiseen.
+
+![image](https://github.com/Ferresette/Palvelinten_hallinta/assets/148973799/51366c88-c8fd-438f-a2a1-d8df442cf07a)
+
+Pitkän aikaan koitin löytää ratkaisua viimeisimmän virheen ratkaisemiseksi, mutta en löytänyt toimivaa keinoa siihen.
+
+## e) Ämpärillinen. Tee Salt-tila, joka asentaa järjestelmään kansiollisen komentoja.
+
+Aloitin luomalla tekstieditorilla tiedoston nimeltä /srv/salt/komennot.sls
+
+Kyseiseen tiedostoon halusin luoda komennot moikka, terve sekä heippa.
+
+![image](https://github.com/Ferresette/Palvelinten_hallinta/assets/148973799/a48773ab-e805-4387-8ab3-e8533e82fa06)
+
+Seuraavaksi käytin sudo salt '*' state.apply komennot komentoa ja tila näytti toimivan onnistuneesti. Alla oleva kuva osoittaa 
+
+![image](https://github.com/Ferresette/Palvelinten_hallinta/assets/148973799/245c56f7-14e1-4a63-84c6-84343bb85eab)
+
+![image](https://github.com/Ferresette/Palvelinten_hallinta/assets/148973799/ae4d9098-ee85-4492-9e73-e0c185fe5dc0)
+
+![image](https://github.com/Ferresette/Palvelinten_hallinta/assets/148973799/ffc9d975-8b3b-471c-a00c-a3d87d7ebf15)
+
+
+
+## References
+
+https://terokarvinen.com/2023/configuration-management-2023-autumn/
+
+https://terokarvinen.com/2018/04/03/apache-user-homepages-automatically-salt-package-file-service-example/
+
+https://chat.openai.com
+
+
 
 
 
