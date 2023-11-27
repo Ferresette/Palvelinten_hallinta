@@ -32,4 +32,43 @@ Lähdin kokeilemaan find komennolla, jotta löytäisin että onko muutoksia teht
 
 ![image](https://github.com/Ferresette/Palvelinten_hallinta/assets/148973799/37004422-2d71-46c5-aa78-709a58f027fd)
 
+## c) Komennus. Tee Salt-tila, joka asentaa järjestelmään uuden komennon.
+
+Aloitin tehtävän luomalla kokeilu.sls tiedoston. 
+
+![image](https://github.com/Ferresette/Palvelinten_hallinta/assets/148973799/18478b69-16d6-405e-95a1-37161a13e49f)
+
+Seuraavaksi siirsin kyseisen tiedoston hakemistoon /srv/salt
+
+![image](https://github.com/Ferresette/Palvelinten_hallinta/assets/148973799/b9643516-d540-4609-b786-2ae90553cf8e)
+
+Lähdin kokeilemaan tämän jälkeen, toimiko kyseinen muutos komennolla
+
+        sudo salt '*' state.apply kokeilu
+
+![image](https://github.com/Ferresette/Palvelinten_hallinta/assets/148973799/90a983ae-2113-4f3c-8e67-3f8460ad18eb)
+
+![image](https://github.com/Ferresette/Palvelinten_hallinta/assets/148973799/77182598-30f6-4700-976b-1692f5cf0780)
+
+Komento toimi molemmilla orjilla.
+
+## d) Apassi. Tee Salt-tila, joka asentaa Apachen näyttämään kotihakemistoja.
+
+Apache2 webbipalvelin minulla oli jo valmiiksi asennettuna ja se oli myös päällä. 
+
+![image](https://github.com/Ferresette/Palvelinten_hallinta/assets/148973799/517be3a3-60be-4ed5-9419-de86783b77e5)
+
+Lähdin hyödyntämään teron sivulla annettuja neuvoja. https://terokarvinen.com/2018/04/03/apache-user-homepages-automatically-salt-package-file-service-example/ 
+
+Siirryin kansioon srv/salt/apache2 ja lisäsin tekstieditoriin seuraavan tekstin.
+
+![image](https://github.com/Ferresette/Palvelinten_hallinta/assets/148973799/a8cfa398-9278-4e65-a34b-9589ee7b4764)
+
+
+
+
+
+
+
+
 
