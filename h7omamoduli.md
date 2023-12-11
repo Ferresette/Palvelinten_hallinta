@@ -58,6 +58,10 @@ Alla vielä kuva lopullisesta sls filestä, verrattuna ylempänä olevaan joudui
 
 ![image](https://github.com/Ferresette/Palvelinten_hallinta/assets/148973799/d11c0058-a58b-4266-a68a-ab8d849b3679)
 
+## Yhteenveto
+
+Sain muutettua palomuurisääntöjä, mikä oli tavoitteeni. En ehkä ihan niin, miten välttämättä halusin, mutta tulipahan kokeiltua enemmän erilaisia ratkaisuja ja painittua ongelmanratkaisun kanssa.
+
 
 ## References
 
